@@ -1,26 +1,48 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Vintage Palette */
+  --vintage-cream: #FDFBF7;
+  --vintage-sepia: #5D4037;
+  --vintage-gold: #D4AF37;
+  --vintage-green: #2C5F2D;
+  --vintage-burgundy: #800020;
+  --vintage-charcoal: #333333;
+  --vintage-offwhite: #F8F9FA;
+
+  --background: var(--vintage-cream);
+  --foreground: var(--vintage-charcoal);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+
+  --color-cream: var(--vintage-cream);
+  --color-sepia: var(--vintage-sepia);
+  --color-gold: var(--vintage-gold);
+  --color-green: var(--vintage-green);
+  --color-burgundy: var(--vintage-burgundy);
+  --color-charcoal: var(--vintage-charcoal);
+  --color-offwhite: var(--vintage-offwhite);
+
+  --font-serif: var(--font-serif);
+  --font-sans: var(--font-sans);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-serif);
 }
