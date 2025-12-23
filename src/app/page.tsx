@@ -1,12 +1,11 @@
 import { Hero } from "@/components/home/Hero";
-import { ProductGrid } from "@/components/product/ProductGrid";
-import { products } from "@/data/products";
+import { HomeGallery } from "@/components/home/HomeGallery";
 
 export default function Home() {
   return (
     <div className="bg-vintage-offwhite">
       <Hero />
-      <ProductGrid products={products} />
+      <HomeGallery />
     </div>
   );
 }

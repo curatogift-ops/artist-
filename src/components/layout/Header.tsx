@@ -2,12 +2,14 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { ShoppingBag, Menu, X } from "lucide-react";
 import { cn } from "@/utils/cn";
 import { useCart } from "@/context/CartContext";
 
 const navigation = [
     { name: "Home", href: "/" },
+    { name: "Gallery", href: "/gallery" },
     { name: "About Us", href: "/about" },
 ];
 
@@ -27,7 +29,14 @@ export function Header() {
                 aria-label="Global"
             >
                 <div className="flex lg:flex-1">
-                    <Link href="/" className="-m-1.5 p-1.5 flex items-center gap-2">
+                    <Link href="/" className="-m-1.5 p-1.5 flex items-center gap-3">
+                        <Image
+                            src="/images/logo.jpeg"
+                            alt="Vintage Art"
+                            width={50}
+                            height={50}
+                            className="rounded-lg"
+                        />
                         <span className="font-serif text-2xl font-bold text-vintage-sepia tracking-tight">
                             Vintage Art
                         </span>
@@ -78,7 +87,14 @@ export function Header() {
                     mobileMenuOpen ? "translate-x-0" : "translate-x-full"
                 )}>
                     <div className="flex items-center justify-between">
-                        <Link href="/" className="-m-1.5 p-1.5" onClick={() => setMobileMenuOpen(false)}>
+                        <Link href="/" className="-m-1.5 p-1.5 flex items-center gap-3" onClick={() => setMobileMenuOpen(false)}>
+                            <Image
+                                src="/images/logo.jpeg"
+                                alt="Vintage Art"
+                                width={40}
+                                height={40}
+                                className="rounded-lg"
+                            />
                             <span className="font-serif text-2xl font-bold text-vintage-sepia">
                                 Vintage Art
                             </span>

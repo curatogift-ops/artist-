@@ -1,9 +1,11 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Instagram, Facebook, Twitter, Mail } from "lucide-react";
 
 const navigation = {
     main: [
         { name: "Home", href: "/" },
+        { name: "Gallery", href: "/gallery" },
         { name: "About Us", href: "/about" },
     ],
     social: [
@@ -34,9 +36,18 @@ export function Footer() {
             <div className="mx-auto max-w-7xl px-6 py-12 lg:px-8">
                 <div className="flex flex-col items-center justify-between gap-6 sm:flex-row">
                     <div className="flex flex-col items-center sm:items-start gap-2">
-                        <span className="font-serif text-xl font-bold text-vintage-sepia">
-                            Vintage Art
-                        </span>
+                        <div className="flex items-center gap-3">
+                            <Image
+                                src="/images/logo.jpeg"
+                                alt="Vintage Art"
+                                width={45}
+                                height={45}
+                                className="rounded-lg"
+                            />
+                            <span className="font-serif text-xl font-bold text-vintage-sepia">
+                                Vintage Art
+                            </span>
+                        </div>
                         <p className="text-sm leading-6 text-vintage-charcoal/80 text-center sm:text-left">
                             Preserving history through digital art.
                         </p>
