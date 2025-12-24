@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { artworks } from "@/data/artworks";
 import { ArrowLeft, ChevronLeft, ChevronRight } from "lucide-react";
+import { AddToCartSection } from "@/components/gallery/AddToCartSection";
 
 interface ArtworkDetailPageProps {
     params: Promise<{
@@ -97,11 +98,14 @@ export default async function ArtworkDetailPage({ params }: ArtworkDetailPagePro
                         <p className="text-lg text-vintage-sepia mb-6">{artwork.style}</p>
 
                         {/* Description */}
-                        <div className="prose prose-lg max-w-none mb-8">
+                        <div className="prose prose-lg max-w-none mb-6">
                             <p className="text-vintage-charcoal/80 leading-relaxed">
                                 {artwork.description}
                             </p>
                         </div>
+
+                        {/* Price and Add to Cart */}
+                        <AddToCartSection artwork={artwork} />
 
                         {/* Metadata Grid */}
                         <div className="bg-white rounded-lg p-6 shadow-sm border border-vintage-sepia/10 mb-8">

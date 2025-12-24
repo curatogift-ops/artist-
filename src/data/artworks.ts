@@ -7,6 +7,7 @@ export interface Artwork {
     style: string;
     colors: string[];
     mood: string;
+    price: number;
 }
 
 export const artworks: Artwork[] = [
@@ -18,7 +19,8 @@ export const artworks: Artwork[] = [
         category: "Fantasy Portrait",
         style: "Digital Fantasy Art",
         colors: ["soft pink", "cream white", "gentle green", "warm beige"],
-        mood: "Serene and Enchanting"
+        mood: "Serene and Enchanting",
+        price: 3
     },
     {
         id: "2",
@@ -28,7 +30,8 @@ export const artworks: Artwork[] = [
         category: "Portrait",
         style: "Contemporary Digital Portrait",
         colors: ["golden amber", "warm orange", "soft brown", "cream"],
-        mood: "Warm and Contemplative"
+        mood: "Warm and Contemplative",
+        price: 3
     },
     {
         id: "3",
@@ -38,7 +41,8 @@ export const artworks: Artwork[] = [
         category: "Portrait",
         style: "Contemporary Digital Art",
         colors: ["deep crimson", "warm red", "soft peach", "burgundy"],
-        mood: "Bold and Confident"
+        mood: "Bold and Confident",
+        price: 3
     },
     {
         id: "4",
@@ -48,7 +52,8 @@ export const artworks: Artwork[] = [
         category: "Portrait",
         style: "Soft Focus Digital Art",
         colors: ["peach", "golden yellow", "soft orange", "cream"],
-        mood: "Peaceful and Dreamy"
+        mood: "Peaceful and Dreamy",
+        price: 3
     },
     {
         id: "5",
@@ -58,7 +63,8 @@ export const artworks: Artwork[] = [
         category: "Fantasy Portrait",
         style: "Fantasy Digital Art",
         colors: ["soft blue", "lavender", "silver", "pale turquoise"],
-        mood: "Mystical and Serene"
+        mood: "Mystical and Serene",
+        price: 3
     },
     {
         id: "6",
@@ -68,7 +74,8 @@ export const artworks: Artwork[] = [
         category: "Fantasy Portrait",
         style: "Romantic Digital Art",
         colors: ["soft pink", "rose", "cream", "gentle green"],
-        mood: "Romantic and Dreamy"
+        mood: "Romantic and Dreamy",
+        price: 3
     },
     {
         id: "7",
@@ -78,7 +85,8 @@ export const artworks: Artwork[] = [
         category: "Portrait",
         style: "Contemporary Digital Art",
         colors: ["soft teal", "ocean blue", "cream", "pale aqua"],
-        mood: "Calm and Tranquil"
+        mood: "Calm and Tranquil",
+        price: 3
     },
     {
         id: "8",
@@ -88,7 +96,8 @@ export const artworks: Artwork[] = [
         category: "Character Portrait",
         style: "Digital Character Art",
         colors: ["warm brown", "golden", "deep shadow", "amber"],
-        mood: "Strong and Determined"
+        mood: "Strong and Determined",
+        price: 3
     },
     {
         id: "9",
@@ -98,7 +107,8 @@ export const artworks: Artwork[] = [
         category: "Portrait",
         style: "Soft Digital Art",
         colors: ["lavender", "soft purple", "pink", "pale blue"],
-        mood: "Ethereal and Romantic"
+        mood: "Ethereal and Romantic",
+        price: 3
     },
     {
         id: "10",
@@ -108,7 +118,8 @@ export const artworks: Artwork[] = [
         category: "Portrait",
         style: "Natural Light Digital Art",
         colors: ["warm brown", "golden", "amber", "rust"],
-        mood: "Contemplative and Warm"
+        mood: "Contemplative and Warm",
+        price: 3
     },
     {
         id: "11",
@@ -118,7 +129,8 @@ export const artworks: Artwork[] = [
         category: "Portrait",
         style: "Soft Realism Digital Art",
         colors: ["soft beige", "warm cream", "gentle brown", "peach"],
-        mood: "Gentle and Compassionate"
+        mood: "Gentle and Compassionate",
+        price: 3
     },
     {
         id: "12",
@@ -128,7 +140,8 @@ export const artworks: Artwork[] = [
         category: "Portrait",
         style: "Vibrant Digital Art",
         colors: ["coral", "peach", "golden", "warm pink"],
-        mood: "Joyful and Radiant"
+        mood: "Joyful and Radiant",
+        price: 3
     },
     {
         id: "13",
@@ -138,7 +151,8 @@ export const artworks: Artwork[] = [
         category: "Fantasy Portrait",
         style: "Nature-Inspired Digital Art",
         colors: ["emerald green", "forest green", "soft cream", "golden"],
-        mood: "Vibrant and Natural"
+        mood: "Vibrant and Natural",
+        price: 3
     },
     {
         id: "14",
@@ -148,7 +162,8 @@ export const artworks: Artwork[] = [
         category: "Portrait",
         style: "Warm Tones Digital Art",
         colors: ["terracotta", "sandy beige", "warm gold", "rust"],
-        mood: "Warm and Timeless"
+        mood: "Warm and Timeless",
+        price: 3
     },
     {
         id: "15",
@@ -158,7 +173,8 @@ export const artworks: Artwork[] = [
         category: "Character Portrait",
         style: "Realistic Digital Art",
         colors: ["natural brown", "soft beige", "warm tan", "cream"],
-        mood: "Strong and Composed"
+        mood: "Strong and Composed",
+        price: 3
     },
     {
         id: "16",
@@ -168,7 +184,8 @@ export const artworks: Artwork[] = [
         category: "Fantasy Portrait",
         style: "Fantasy Digital Art",
         colors: ["sapphire blue", "deep navy", "soft cyan", "silver"],
-        mood: "Mysterious and Dreamy"
+        mood: "Mysterious and Dreamy",
+        price: 3
     },
     {
         id: "17",
@@ -178,7 +195,8 @@ export const artworks: Artwork[] = [
         category: "Portrait",
         style: "Golden Hour Digital Art",
         colors: ["golden yellow", "warm amber", "soft orange", "cream"],
-        mood: "Radiant and Optimistic"
+        mood: "Radiant and Optimistic",
+        price: 3
     },
     {
         id: "18",
@@ -188,7 +206,8 @@ export const artworks: Artwork[] = [
         category: "Fantasy Portrait",
         style: "Ethereal Digital Art",
         colors: ["soft pink", "pale blue", "cream", "lavender"],
-        mood: "Ethereal and Heavenly"
+        mood: "Ethereal and Heavenly",
+        price: 3
     },
     {
         id: "19",
@@ -198,7 +217,8 @@ export const artworks: Artwork[] = [
         category: "Portrait",
         style: "Classic Digital Art",
         colors: ["amber", "golden brown", "warm honey", "cream"],
-        mood: "Elegant and Refined"
+        mood: "Elegant and Refined",
+        price: 3
     },
     {
         id: "20",
@@ -208,7 +228,8 @@ export const artworks: Artwork[] = [
         category: "Portrait",
         style: "Atmospheric Digital Art",
         colors: ["dusky purple", "soft blue", "lavender", "gray"],
-        mood: "Contemplative and Peaceful"
+        mood: "Contemplative and Peaceful",
+        price: 3
     },
     {
         id: "21",
@@ -218,7 +239,8 @@ export const artworks: Artwork[] = [
         category: "Fantasy Portrait",
         style: "Floral Fantasy Art",
         colors: ["vibrant pink", "soft purple", "green", "cream"],
-        mood: "Regal and Natural"
+        mood: "Regal and Natural",
+        price: 3
     },
     {
         id: "22",
@@ -228,7 +250,8 @@ export const artworks: Artwork[] = [
         category: "Portrait",
         style: "Soft Light Digital Art",
         colors: ["soft peach", "pale pink", "cream", "gentle yellow"],
-        mood: "Gentle and Hopeful"
+        mood: "Gentle and Hopeful",
+        price: 3
     },
     {
         id: "23",
@@ -238,7 +261,8 @@ export const artworks: Artwork[] = [
         category: "Portrait",
         style: "Natural Digital Art",
         colors: ["warm brown", "rustic orange", "cream", "golden"],
-        mood: "Warm and Authentic"
+        mood: "Warm and Authentic",
+        price: 3
     },
     {
         id: "24",
@@ -248,7 +272,8 @@ export const artworks: Artwork[] = [
         category: "Portrait",
         style: "Soft Digital Art",
         colors: ["soft cream", "pale blue", "gentle beige", "white"],
-        mood: "Light and Peaceful"
+        mood: "Light and Peaceful",
+        price: 3
     },
     {
         id: "25",
@@ -258,7 +283,8 @@ export const artworks: Artwork[] = [
         category: "Portrait",
         style: "Natural Realism",
         colors: ["soft beige", "natural brown", "cream", "warm tan"],
-        mood: "Authentic and Graceful"
+        mood: "Authentic and Graceful",
+        price: 3
     },
     {
         id: "26",
@@ -268,7 +294,8 @@ export const artworks: Artwork[] = [
         category: "Character Portrait",
         style: "Contemporary Digital Art",
         colors: ["neutral brown", "soft gray", "warm beige", "cream"],
-        mood: "Confident and Poised"
+        mood: "Confident and Poised",
+        price: 3
     },
     {
         id: "27",
@@ -278,7 +305,8 @@ export const artworks: Artwork[] = [
         category: "Portrait",
         style: "Warm Tones Digital Art",
         colors: ["warm gold", "soft orange", "cream", "peach"],
-        mood: "Comforting and Loving"
+        mood: "Comforting and Loving",
+        price: 3
     },
     {
         id: "28",
@@ -288,7 +316,8 @@ export const artworks: Artwork[] = [
         category: "Portrait",
         style: "Serene Digital Art",
         colors: ["soft cream", "gentle beige", "pale pink", "warm white"],
-        mood: "Peaceful and Meditative"
+        mood: "Peaceful and Meditative",
+        price: 3
     },
     {
         id: "29",
@@ -298,7 +327,8 @@ export const artworks: Artwork[] = [
         category: "Portrait",
         style: "Vibrant Digital Art",
         colors: ["vibrant orange", "golden yellow", "warm red", "amber"],
-        mood: "Vibrant and Energetic"
+        mood: "Vibrant and Energetic",
+        price: 3
     },
     {
         id: "30",
@@ -308,7 +338,8 @@ export const artworks: Artwork[] = [
         category: "Portrait",
         style: "Floral Digital Art",
         colors: ["soft pink", "gentle green", "cream", "pale yellow"],
-        mood: "Fresh and Renewing"
+        mood: "Fresh and Renewing",
+        price: 3
     },
     {
         id: "31",
@@ -318,7 +349,8 @@ export const artworks: Artwork[] = [
         category: "Portrait",
         style: "Earth Tones Digital Art",
         colors: ["rich brown", "warm tan", "cream", "golden"],
-        mood: "Grounded and Elegant"
+        mood: "Grounded and Elegant",
+        price: 3
     },
     {
         id: "32",
@@ -328,7 +360,8 @@ export const artworks: Artwork[] = [
         category: "Portrait",
         style: "Soft Glow Digital Art",
         colors: ["rosy pink", "soft peach", "cream", "warm white"],
-        mood: "Radiant and Vital"
+        mood: "Radiant and Vital",
+        price: 3
     },
     {
         id: "33",
@@ -338,7 +371,8 @@ export const artworks: Artwork[] = [
         category: "Portrait",
         style: "Soft Portrait Art",
         colors: ["soft beige", "warm cream", "gentle pink", "pale yellow"],
-        mood: "Kind and Compassionate"
+        mood: "Kind and Compassionate",
+        price: 3
     },
     {
         id: "34",
@@ -348,7 +382,8 @@ export const artworks: Artwork[] = [
         category: "Portrait",
         style: "Warm Light Digital Art",
         colors: ["honey gold", "warm amber", "soft cream", "golden brown"],
-        mood: "Cozy and Relaxed"
+        mood: "Cozy and Relaxed",
+        price: 3
     },
     {
         id: "35",
@@ -358,7 +393,8 @@ export const artworks: Artwork[] = [
         category: "Portrait",
         style: "Natural Digital Art",
         colors: ["soft tan", "cream", "gentle beige", "warm white"],
-        mood: "Graceful and Harmonious"
+        mood: "Graceful and Harmonious",
+        price: 3
     },
     {
         id: "36",
@@ -368,7 +404,8 @@ export const artworks: Artwork[] = [
         category: "Portrait",
         style: "Vibrant Sunset Art",
         colors: ["coral", "peachy pink", "golden", "warm orange"],
-        mood: "Warm and Beautiful"
+        mood: "Warm and Beautiful",
+        price: 3
     },
     {
         id: "37",
@@ -378,7 +415,8 @@ export const artworks: Artwork[] = [
         category: "Portrait",
         style: "Soft Focus Art",
         colors: ["pale cream", "soft white", "gentle beige", "whisper pink"],
-        mood: "Intimate and Tender"
+        mood: "Intimate and Tender",
+        price: 3
     },
     {
         id: "38",
@@ -388,7 +426,8 @@ export const artworks: Artwork[] = [
         category: "Portrait",
         style: "Seasonal Digital Art",
         colors: ["autumn orange", "warm brown", "golden", "rust"],
-        mood: "Nostalgic and Warm"
+        mood: "Nostalgic and Warm",
+        price: 3
     },
     {
         id: "39",
@@ -398,7 +437,8 @@ export const artworks: Artwork[] = [
         category: "Portrait",
         style: "Contemplative Art",
         colors: ["soft gray", "muted beige", "gentle brown", "cream"],
-        mood: "Reflective and Introspective"
+        mood: "Reflective and Introspective",
+        price: 3
     },
     {
         id: "40",
@@ -408,7 +448,8 @@ export const artworks: Artwork[] = [
         category: "Fantasy Portrait",
         style: "Fantasy Garden Art",
         colors: ["vibrant green", "soft pink", "purple", "golden"],
-        mood: "Magical and Enchanting"
+        mood: "Magical and Enchanting",
+        price: 3
     },
     {
         id: "41",
@@ -418,7 +459,8 @@ export const artworks: Artwork[] = [
         category: "Portrait",
         style: "Soft Glow Art",
         colors: ["peach", "soft coral", "cream", "warm pink"],
-        mood: "Radiant and Warm"
+        mood: "Radiant and Warm",
+        price: 3
     },
     {
         id: "42",
@@ -428,7 +470,8 @@ export const artworks: Artwork[] = [
         category: "Portrait",
         style: "Soft Romantic Art",
         colors: ["lavender", "soft purple", "pale pink", "cream"],
-        mood: "Romantic and Calming"
+        mood: "Romantic and Calming",
+        price: 3
     },
     {
         id: "43",
@@ -438,7 +481,8 @@ export const artworks: Artwork[] = [
         category: "Portrait",
         style: "Radiant Digital Art",
         colors: ["golden yellow", "warm gold", "amber", "cream"],
-        mood: "Radiant and Positive"
+        mood: "Radiant and Positive",
+        price: 3
     },
     {
         id: "44",
@@ -448,7 +492,8 @@ export const artworks: Artwork[] = [
         category: "Portrait",
         style: "Serene Digital Art",
         colors: ["soft cream", "pale beige", "gentle white", "warm ivory"],
-        mood: "Serene and Balanced"
+        mood: "Serene and Balanced",
+        price: 3
     },
     {
         id: "45",
@@ -458,7 +503,8 @@ export const artworks: Artwork[] = [
         category: "Portrait",
         style: "Warm Tones Art",
         colors: ["honey gold", "warm amber", "golden brown", "cream"],
-        mood: "Sweet and Comforting"
+        mood: "Sweet and Comforting",
+        price: 3
     },
     {
         id: "46",
@@ -468,7 +514,8 @@ export const artworks: Artwork[] = [
         category: "Character Portrait",
         style: "Dynamic Character Art",
         colors: ["warm brown", "deep shadow", "golden", "amber"],
-        mood: "Fierce and Determined"
+        mood: "Fierce and Determined",
+        price: 3
     },
     {
         id: "47",
@@ -478,7 +525,8 @@ export const artworks: Artwork[] = [
         category: "Portrait",
         style: "Romantic Sunset Art",
         colors: ["blush pink", "soft orange", "peach", "cream"],
-        mood: "Romantic and Dreamy"
+        mood: "Romantic and Dreamy",
+        price: 3
     },
     {
         id: "48",
@@ -488,7 +536,8 @@ export const artworks: Artwork[] = [
         category: "Fantasy Portrait",
         style: "Mystical Digital Art",
         colors: ["soft purple", "ethereal blue", "golden", "cream"],
-        mood: "Mystical and Magical"
+        mood: "Mystical and Magical",
+        price: 3
     },
     {
         id: "49",
@@ -498,7 +547,8 @@ export const artworks: Artwork[] = [
         category: "Portrait",
         style: "Vibrant Portrait Art",
         colors: ["coral", "warm pink", "peach", "golden"],
-        mood: "Vibrant and Tropical"
+        mood: "Vibrant and Tropical",
+        price: 3
     },
     {
         id: "50",
@@ -508,7 +558,8 @@ export const artworks: Artwork[] = [
         category: "Portrait",
         style: "Soft Warm Art",
         colors: ["soft peach", "warm cream", "gentle gold", "pale pink"],
-        mood: "Gentle and Caring"
+        mood: "Gentle and Caring",
+        price: 3
     },
     {
         id: "51",
@@ -518,7 +569,8 @@ export const artworks: Artwork[] = [
         category: "Portrait",
         style: "Classic Portrait Art",
         colors: ["soft tan", "cream", "warm beige", "gentle brown"],
-        mood: "Elegant and Timeless"
+        mood: "Elegant and Timeless",
+        price: 3
     },
     {
         id: "52",
@@ -528,7 +580,8 @@ export const artworks: Artwork[] = [
         category: "Portrait",
         style: "Vibrant Digital Art",
         colors: ["vibrant pink", "bright coral", "golden", "warm orange"],
-        mood: "Energetic and Joyful"
+        mood: "Energetic and Joyful",
+        price: 3
     },
     {
         id: "53",
@@ -538,7 +591,8 @@ export const artworks: Artwork[] = [
         category: "Character Portrait",
         style: "Heroic Character Art",
         colors: ["warm brown", "golden", "deep shadow", "amber"],
-        mood: "Noble and Proud"
+        mood: "Noble and Proud",
+        price: 3
     },
     {
         id: "54",
@@ -548,7 +602,8 @@ export const artworks: Artwork[] = [
         category: "Fantasy Portrait",
         style: "Whimsical Fantasy Art",
         colors: ["soft pink", "gentle purple", "green", "cream"],
-        mood: "Whimsical and Enchanting"
+        mood: "Whimsical and Enchanting",
+        price: 3
     },
     {
         id: "55",
@@ -558,7 +613,8 @@ export const artworks: Artwork[] = [
         category: "Character Portrait",
         style: "Strong Character Art",
         colors: ["natural brown", "warm tan", "deep shadow", "golden"],
-        mood: "Steadfast and Reliable"
+        mood: "Steadfast and Reliable",
+        price: 3
     },
     {
         id: "56",
@@ -568,7 +624,8 @@ export const artworks: Artwork[] = [
         category: "Portrait",
         style: "Glowing Portrait Art",
         colors: ["peach", "soft coral", "golden", "cream"],
-        mood: "Glowing and Vital"
+        mood: "Glowing and Vital",
+        price: 3
     },
     {
         id: "57",
@@ -578,7 +635,8 @@ export const artworks: Artwork[] = [
         category: "Portrait",
         style: "Elegant Digital Art",
         colors: ["soft cream", "pale pink", "gentle beige", "warm white"],
-        mood: "Elegant and Graceful"
+        mood: "Elegant and Graceful",
+        price: 3
     },
     {
         id: "58",
@@ -588,7 +646,8 @@ export const artworks: Artwork[] = [
         category: "Portrait",
         style: "Warm Comfort Art",
         colors: ["warm brown", "golden", "soft orange", "cream"],
-        mood: "Comforting and Safe"
+        mood: "Comforting and Safe",
+        price: 3
     },
     {
         id: "59",
@@ -598,7 +657,8 @@ export const artworks: Artwork[] = [
         category: "Fantasy Portrait",
         style: "Divine Fantasy Art",
         colors: ["vibrant orange", "golden", "warm red", "amber"],
-        mood: "Majestic and Divine"
+        mood: "Majestic and Divine",
+        price: 3
     },
     {
         id: "60",
@@ -608,7 +668,8 @@ export const artworks: Artwork[] = [
         category: "Character Portrait",
         style: "Heroic Portrait Art",
         colors: ["warm brown", "golden", "deep shadow", "amber"],
-        mood: "Brave and Courageous"
+        mood: "Brave and Courageous",
+        price: 3
     },
     {
         id: "61",
@@ -618,7 +679,8 @@ export const artworks: Artwork[] = [
         category: "Portrait",
         style: "Soft Floral Art",
         colors: ["soft pink", "rose", "cream", "pale peach"],
-        mood: "Delicate and Tender"
+        mood: "Delicate and Tender",
+        price: 3
     },
     {
         id: "62",
@@ -628,6 +690,7 @@ export const artworks: Artwork[] = [
         category: "Character Portrait",
         style: "Noble Portrait Art",
         colors: ["natural brown", "warm tan", "golden", "cream"],
-        mood: "Noble and Dignified"
+        mood: "Noble and Dignified",
+        price: 3
     }
 ];
