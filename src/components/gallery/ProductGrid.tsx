@@ -2,12 +2,6 @@
 
 import { useState, useMemo } from 'react';
 import { Product } from '@/types';
-import Link from 'next/link';
-import Image from 'next/image';
-import { useCurrency } from '@/context/CurrencyContext';
-import { useCart } from '@/context/CartContext';
-import { useWishlist } from '@/context/WishlistContext';
-import { ShoppingCart, Heart } from 'lucide-react';
 import ProductCard from './ProductCard';
 
 interface ProductGridProps {
@@ -15,9 +9,6 @@ interface ProductGridProps {
 }
 
 export default function ProductGrid({ products }: ProductGridProps) {
-  const { convertPrice } = useCurrency();
-  const { addToCart } = useCart();
-  const { addToWishlist, removeFromWishlist, isInWishlist } = useWishlist();
   const [filter, setFilter] = useState('All');
   const [sortBy, setSortBy] = useState('newest');
 

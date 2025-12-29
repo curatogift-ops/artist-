@@ -38,7 +38,7 @@ function DownloadPageContent() {
         <div className="max-w-md mx-auto">
           <h1 className="text-2xl font-bold mb-4">Order Not Found</h1>
           <p className="text-zinc-600 dark:text-zinc-400 mb-8">
-            We couldn't find your order. Please check your email for the download link.
+            We couldn&apos;t find your order. Please check your email for the download link.
           </p>
           <Link
             href="/"
@@ -117,7 +117,7 @@ function DownloadPageContent() {
           </h2>
           <p className="text-blue-800 dark:text-blue-200 text-sm">
             Click the download button on each item below to save your high-resolution digital paintings. 
-            You can also download all items at once using the "Download All" button.
+            You can also download all items at once using the &quot;Download All&quot; button.
           </p>
         </div>
 
