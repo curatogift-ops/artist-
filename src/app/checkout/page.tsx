@@ -125,7 +125,7 @@ export default function CheckoutPage() {
                 },
             };
 
-            const razorpay = new (window as any).Razorpay(options);
+            const razorpay = new window.Razorpay(options);
             razorpay.open();
         } catch (error) {
             console.error('Payment error:', error);
