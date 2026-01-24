@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import Razorpay from 'razorpay';
-import crypto from 'crypto';
+
 
 const razorpay = new Razorpay({
   key_id: process.env.NEXT_PUBLIC_RAZORPAY_KEY_ID!,
@@ -36,10 +36,10 @@ export async function POST(request: NextRequest) {
       currency: order.currency,
       amount: order.amount,
     });
-  } catch (error: any) {
+  } catch (error) {
     console.error('Error creating Razorpay order:', error);
     return NextResponse.json(
-      { error: error.message || 'Failed to create order' },
+      { error: error instanceof Error ? error.message : 'Failed to create order' },
       { status: 500 }
     );
   }

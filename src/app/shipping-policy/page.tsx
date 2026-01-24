@@ -20,7 +20,7 @@ export default function ShippingPolicy() {
         <ol className="list-decimal pl-6 space-y-4">
           <li><strong>Selection:</strong> You choose your desired digital painting(s) and add them to your cart.</li>
           <li><strong>Payment:</strong> You complete the secure payment process through our payment gateway.</li>
-          <li><strong>Instant Redirect:</strong> Immediately after payment is confirmed, you will be automatically redirected back to our website's <strong>"Order Success"</strong> page.</li>
+          <li><strong>Instant Redirect:</strong> Immediately after payment is confirmed, you will be automatically redirected back to our website&apos;s <strong>&quot;Order Success&quot;</strong> page.</li>
           <li><strong>Download:</strong> Your high-resolution PDF/Image files will be available for download instantly on that page. You can save them directly to your device.</li>
         </ol>
 

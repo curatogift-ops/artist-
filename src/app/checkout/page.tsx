@@ -10,6 +10,7 @@ import Image from 'next/image';
 import { ArrowLeft, CheckCircle } from 'lucide-react';
 
 import confetti from 'canvas-confetti';
+import { RazorpayPaymentResponse } from '@/types/razorpay';
 
 export default function CheckoutPage() {
     const { cart, clearCart } = useCart();
@@ -70,7 +71,7 @@ export default function CheckoutPage() {
                 theme: {
                     color: '#9333ea', // Purple-600
                 },
-                handler: async function (response: any) {
+                handler: async function (response: RazorpayPaymentResponse) {
                     // Step 3: Verify payment on backend
                     try {
                         const verifyResponse = await fetch('/api/razorpay/verify-payment', {

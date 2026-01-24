@@ -19,7 +19,7 @@ export default function RefundPolicy() {
 
         <h2 className="text-2xl font-bold mt-8 mb-4">1. No Refunds on Downloaded Items</h2>
         <p>
-          Once you have clicked the "Download" link or the file has been sent to your email, the product is considered "delivered" and "consumed."
+          Once you have clicked the &quot;Download&quot; link or the file has been sent to your email, the product is considered &quot;delivered&quot; and &quot;consumed.&quot;
         </p>
         <p>
           <strong>We cannot offer a refund, exchange, or return for any file that has been downloaded.</strong> This is industry standard for digital goods to prevent abuse (e.g., downloading the art, using it, and then asking for money back).
@@ -35,7 +35,7 @@ export default function RefundPolicy() {
 
         <h2 className="text-2xl font-bold mt-8 mb-4">3. Dispute Resolution</h2>
         <p>
-           If you open a dispute or chargeback with your bank claiming "Item Not Received" for a product that was successfully downloaded (according to our server logs), we will submit the access logs as evidence to your bank to contest the claim.
+           If you open a dispute or chargeback with your bank claiming &quot;Item Not Received&quot; for a product that was successfully downloaded (according to our server logs), we will submit the access logs as evidence to your bank to contest the claim.
         </p>
 
         <h2 className="text-2xl font-bold mt-8 mb-4">4. Contact for Issues</h2>

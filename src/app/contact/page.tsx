@@ -1,5 +1,5 @@
 import React from 'react';
-import { Mail, MapPin, Phone } from 'lucide-react';
+import { Mail } from 'lucide-react';
 
 export default function ContactPage() {
   return (
@@ -9,7 +9,7 @@ export default function ContactPage() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
         <div className="space-y-8">
             <p className="text-lg text-zinc-600 dark:text-zinc-400">
-                Have a question about a digital art piece? Need help with your download? We're here to assist you!
+                Have a question about a digital art piece? Need help with your download? We&apos;re here to assist you!
             </p>
             
             <div className="space-y-6">

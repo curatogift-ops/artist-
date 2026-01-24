@@ -52,10 +52,10 @@ export async function POST(request: NextRequest) {
         { status: 400 }
       );
     }
-  } catch (error: any) {
+  } catch (error) {
     console.error('Error verifying payment:', error);
     return NextResponse.json(
-      { error: error.message || 'Failed to verify payment' },
+      { error: error instanceof Error ? error.message : 'Failed to verify payment' },
       { status: 500 }
     );
   }
