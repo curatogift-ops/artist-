@@ -89,7 +89,7 @@ export default function PrivacyPolicy() {
           <li>Opt out of automated decisions.</li>
         </ul>
         <p>EU/UK residents: Additional GDPR rights include lodging a complaint with a supervisory authority.</p>
-        <p>To exercise rights, contact us at <a href="mailto:privacy@digitalpeinture.com" className="text-purple-600 hover:text-purple-700">privacy@digitalpeinture.com</a>.</p>
+        <p>To exercise rights, contact us at <a href="mailto:hello@digitalpeinture.com" className="text-purple-600 hover:text-purple-700">hello@digitalpeinture.com</a>.</p>
 
         <h2 className="text-2xl font-bold mt-8 mb-4">9. International Data Transfers</h2>
         <p>Your data may be transferred to and processed in countries outside your residence (e.g., servers in the US). We use appropriate safeguards (e.g., standard contractual clauses) for such transfers.</p>
@@ -101,8 +101,7 @@ export default function PrivacyPolicy() {
         <p>For questions about this Privacy Policy or your data, contact:</p>
         <div className="mt-4 p-6 bg-zinc-100 dark:bg-zinc-800 rounded-xl">
             <p className="font-bold">DigitalPeinture</p>
-            <p>[Your Address]</p>
-            <p>Email: <a href="mailto:[Your Email]" className="text-purple-600 hover:text-purple-700">[Your Email]</a></p>
+            <p>Email: <a href="mailto:hello@digitalpeinture.com" className="text-purple-600 hover:text-purple-700">hello@digitalpeinture.com</a></p>
         </div>
         
         <p className="mt-8 font-medium">Thank you for trusting DigitalPeinture with your digital art purchases!</p>

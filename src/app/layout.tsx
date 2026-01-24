@@ -8,6 +8,8 @@ import { CartProvider } from "@/context/CartContext";
 import StickyCartNotification from "@/components/layout/StickyCartNotification";
 import { WishlistProvider } from "@/context/WishlistContext";
 import { OrderProvider } from "@/context/OrderContext";
+import AgeVerificationModal from "@/components/AgeVerificationModal";
+
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -23,6 +25,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <script src="https://checkout.razorpay.com/v1/checkout.js" async></script>
+      </head>
       <body className={inter.className} suppressHydrationWarning>
         <CurrencyProvider>
           <CartProvider>
@@ -35,6 +40,7 @@ export default function RootLayout({
                   </main>
                   <Footer />
                   <StickyCartNotification />
+                  <AgeVerificationModal />
                 </div>
               </OrderProvider>
             </WishlistProvider>

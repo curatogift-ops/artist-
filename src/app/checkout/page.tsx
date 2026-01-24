@@ -13,7 +13,7 @@ import confetti from 'canvas-confetti';
 
 export default function CheckoutPage() {
     const { cart, clearCart } = useCart();
-    const { convertPrice } = useCurrency();
+    const { convertPrice, rates } = useCurrency();
     const { createOrder } = useOrder();
     const router = useRouter();
     const [step, setStep] = useState<'form' | 'success'>('form');
@@ -22,32 +22,115 @@ export default function CheckoutPage() {
         email: '',
         phone: ''
     });
+    const [isProcessing, setIsProcessing] = useState(false);
 
     const subtotalUSD = cart.reduce((acc, item) => acc + (item.price_usd * item.quantity), 0);
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         
-        // Create order and get order ID
-        const orderId = createOrder(cart, customerInfo, subtotalUSD);
-        
-        // Trigger confetti
-        confetti({
-            particleCount: 150,
-            spread: 70,
-            origin: { y: 0.6 },
-            colors: ['#a855f7', '#ec4899', '#fce7f3'] // Purple/Pink theme
-        });
+        if (isProcessing) return;
+        setIsProcessing(true);
 
-        // Show success message and clear cart
-        setStep('success');
-        clearCart();
-        window.scrollTo(0, 0);
-        
-        // Redirect to download page after 2 seconds
-        setTimeout(() => {
-            router.push(`/download?orderId=${orderId}`);
-        }, 2000);
+        try {
+            // Step 1: Convert USD to INR (Razorpay requires INR for UPI)
+            const INR_RATE = rates.INR || 83.5; // Fallback to 83.5 if rate not loaded
+            const amountInINR = subtotalUSD * INR_RATE;
+
+            // Step 2: Create Razorpay order on backend
+            const orderResponse = await fetch('/api/razorpay/create-order', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    amount: amountInINR,
+                    currency: 'INR',
+                    receipt: `receipt_${Date.now()}`,
+                }),
+            });
+
+            if (!orderResponse.ok) {
+                throw new Error('Failed to create order');
+            }
+
+            const orderData = await orderResponse.json();
+
+            // Step 3: Initialize Razorpay checkout with INR (required for UPI)
+            const options = {
+                key: process.env.NEXT_PUBLIC_RAZORPAY_KEY_ID!,
+                amount: orderData.amount,
+                currency: 'INR', // MUST be INR for UPI to work
+                name: 'DigitalPeinturePDF',
+                description: 'Purchase of Digital Art',
+                order_id: orderData.orderId,
+                prefill: {
+                    name: customerInfo.name,
+                    email: customerInfo.email,
+                    contact: customerInfo.phone,
+                },
+                theme: {
+                    color: '#9333ea', // Purple-600
+                },
+                handler: async function (response: any) {
+                    // Step 3: Verify payment on backend
+                    try {
+                        const verifyResponse = await fetch('/api/razorpay/verify-payment', {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify({
+                                razorpay_order_id: response.razorpay_order_id,
+                                razorpay_payment_id: response.razorpay_payment_id,
+                                razorpay_signature: response.razorpay_signature,
+                            }),
+                        });
+
+                        const verifyData = await verifyResponse.json();
+
+                        if (verifyData.success) {
+                            // Payment successful - create order and show success
+                            const orderId = createOrder(cart, customerInfo, subtotalUSD);
+                            
+                            // Trigger confetti
+                            confetti({
+                                particleCount: 150,
+                                spread: 70,
+                                origin: { y: 0.6 },
+                                colors: ['#a855f7', '#ec4899', '#fce7f3'],
+                            });
+
+                            // Show success and clear cart
+                            setStep('success');
+                            clearCart();
+                            window.scrollTo(0, 0);
+                            
+                            // Redirect to download page
+                            setTimeout(() => {
+                                router.push(`/download?orderId=${orderId}`);
+                            }, 2000);
+                        } else {
+                            throw new Error('Payment verification failed');
+                        }
+                    } catch (error) {
+                        console.error('Payment verification error:', error);
+                        alert('Payment verification failed. Please contact support.');
+                    } finally {
+                        setIsProcessing(false);
+                    }
+                },
+                modal: {
+                    ondismiss: function () {
+                        setIsProcessing(false);
+                        alert('Payment cancelled');
+                    },
+                },
+            };
+
+            const razorpay = new (window as any).Razorpay(options);
+            razorpay.open();
+        } catch (error) {
+            console.error('Payment error:', error);
+            alert('Failed to initiate payment. Please try again.');
+            setIsProcessing(false);
+        }
     };
 
     const [mounted, setMounted] = useState(false);
@@ -124,9 +207,16 @@ export default function CheckoutPage() {
                             />
                         </div>
 
-                        <button type="submit" className="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white font-bold py-4 rounded-xl shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all mt-8">
-                            Pay {convertPrice(subtotalUSD)}
+                        <button 
+                            type="submit" 
+                            disabled={isProcessing}
+                            className="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white font-bold py-4 rounded-xl shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all mt-8 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
+                        >
+                            {isProcessing ? 'Processing...' : `Pay ₹${Math.round(subtotalUSD * (rates.INR || 83.5))}`}
                         </button>
+                        <p className="text-xs text-zinc-500 text-center mt-2">
+                            Amount shown in INR (approx. {convertPrice(subtotalUSD)})
+                        </p>
                     </form>
                 </div>
 

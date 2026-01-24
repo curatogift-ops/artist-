@@ -44,7 +44,7 @@ export default function AboutPage() {
         
         <div className="mt-8 p-6 bg-zinc-100 dark:bg-zinc-800 rounded-xl">
             <p className="font-bold text-lg mb-2">The DigitalPeinture Team</p>
-            <p>[Your Name or Business Name]</p>
+
             <p>Contact: <a href="mailto:hello@digitalpeinture.com" className="text-purple-600 hover:text-purple-700">hello@digitalpeinture.com</a></p>
             <p>Website: digitalpeinture.com</p>
         </div>
